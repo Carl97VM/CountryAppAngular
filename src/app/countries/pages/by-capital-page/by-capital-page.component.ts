@@ -15,7 +15,6 @@ export class ByCapitalPageComponent {
   constructor( private countriesService: CountriesService){}
 
   searchByCapital( term: string ): void{
-    console.log('Desde el capital page');
     this.countriesService.searchCapital( term )
       .subscribe( countries =>  {this.countries = countries});
     // console.log({term});
