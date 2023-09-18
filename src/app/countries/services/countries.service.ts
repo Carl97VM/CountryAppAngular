@@ -17,7 +17,8 @@ export class CountriesService {
     return this.http.get<Country[]>(url)
     .pipe(
       catchError( () => of([])),
-      delay( 2000 ) // indica que demorara 2 s. en mostrar la informacion
+      // delay( 2000 ) // indica que demorara 2 s. en mostrar la informacion
+      // El delay me lo lleve al componente principal el cual escucha lo que se oprime
     );
   }
 
